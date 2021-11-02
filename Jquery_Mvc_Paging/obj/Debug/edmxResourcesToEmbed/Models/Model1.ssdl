@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mrezak16_gmail_com_POSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ItemCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="real" Nullable="false" />
+    <Property Name="IME" Type="nvarchar(max)" />
+    <Property Name="TypeId" Type="int" />
+    <Property Name="PhotoUrl" Type="nvarchar(max)" />
+    <Property Name="IsPublished" Type="bit" Nullable="false" />
+    <Property Name="IsNewTag" Type="bit" Nullable="false" />
+    <Property Name="IsSoldTag" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="IsReport" Type="bit" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CustomizedView" Type="nvarchar(max)" />
+    <Property Name="Colors" Type="nvarchar(max)" />
+    <Property Name="BrandId" Type="int" />
+  </EntityType>
+  <EntityContainer Name="mrezak16_gmail_com_POSModelStoreContainer">
+    <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
